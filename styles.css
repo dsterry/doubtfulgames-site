@@ -319,6 +319,7 @@ figcaption {
 .utility-page { width: min(760px, calc(100vw - 48px)); margin: 0 auto; padding: clamp(5rem, 12vw, 9rem) 0 8rem; }
 .utility-page h1 { font-size: clamp(3.2rem, 8vw, 6.5rem); }
 .utility-page h2 { margin-top: 3rem; font-size: 1.7rem; }
+.utility-page h3 { margin: 2rem 0 .65rem; font-size: 1rem; }
 .utility-page p, .utility-page li { color: var(--ink-soft); }
 .utility-page .back { margin-bottom: 4rem; display: inline-block; }
 
