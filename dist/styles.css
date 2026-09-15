@@ -336,10 +336,15 @@ figcaption {
 }
 
 .game-story > div:last-child { max-width: 720px; }
-.game-gallery { padding-bottom: clamp(7rem, 14vw, 12rem); }
-.game-figure { margin: 0; }
-.puzzle-figure { width: min(72%, 760px); }
-.notebook-figure { width: min(66%, 700px); margin: -12rem 0 0 auto; }
+.game-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  padding-bottom: clamp(7rem, 14vw, 12rem);
+}
+.game-figure { width: 100%; margin: 0; }
+.game-gallery .media-stage { margin-top: 0; }
 .notebook-figure img { box-shadow: 0 22px 60px var(--shadow); }
 
 .studio-page { position: relative; display: grid; align-items: center; padding: clamp(6rem, 13vw, 12rem) 0; }
@@ -395,8 +400,7 @@ figcaption {
   .page-intro { padding-top: 5rem; }
   .game-title { white-space: normal; }
   .game-story { grid-template-columns: 1fr; gap: 1rem; }
-  .puzzle-figure, .notebook-figure { width: 100%; }
-  .notebook-figure { margin-top: 3rem; }
+  .game-gallery { grid-template-columns: 1fr; }
   .studio-page { align-items: start; }
   .studio-dots i:nth-child(1) { top: auto; bottom: 8%; opacity: .8; }
   .studio-dots i:nth-child(2) { right: 42%; bottom: 5%; opacity: .8; }
