@@ -63,10 +63,13 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--rule);
+  background: var(--ink);
+  box-shadow: 0 0 0 100vmax var(--ink);
+  clip-path: inset(0 -100vmax);
 }
 
 .brand {
+  color: var(--paper-bright);
   text-decoration: none;
   font-weight: 650;
   letter-spacing: .015em;
@@ -84,19 +87,34 @@ img { display: block; max-width: 100%; }
 
 .nav a { position: relative; }
 
+.site-header .nav a { color: rgba(255, 254, 247, .72); }
+.site-header .nav a:hover,
+.site-header .nav a:focus-visible,
+.site-header .nav a[aria-current="page"] { color: var(--paper-bright); }
+
 .nav a::after {
   content: "";
   position: absolute;
-  height: 2px;
-  left: 0;
-  right: 100%;
-  bottom: -.45rem;
+  width: 5px;
+  height: 5px;
+  left: 50%;
+  bottom: -.55rem;
+  border-radius: 50%;
   background: var(--coral);
-  transition: right 160ms ease;
+  opacity: 0;
+  transform: translateX(-50%) scale(.4);
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.nav a:nth-child(1)::after { background: var(--coral); }
+.nav a:nth-child(2)::after { background: var(--mint); }
+.nav a:nth-child(3)::after { background: var(--ochre); }
+
 .nav a:hover, .nav a:focus-visible, .footer-nav a:hover, .footer-nav a:focus-visible { color: var(--ink); }
-.nav a:hover::after, .nav a:focus-visible::after, .nav a[aria-current="page"]::after { right: 0; }
+.nav a:hover::after, .nav a:focus-visible::after, .nav a[aria-current="page"]::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
 
 main { overflow: hidden; }
 
