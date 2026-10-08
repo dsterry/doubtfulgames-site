@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover Project: Kept, a gentle puzzle game about memories and the connections that bring the past back to life.">
+  <meta name="description" content="Project: Kept is a gentle puzzle journey about connection, transformation, and a sense of place.">
   <title>Project: Kept — Doubtful Games</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f6f6ee'/%3E%3Ccircle cx='26' cy='25' r='13' fill='%2370ceb0'/%3E%3Cpath d='M15 23 34 38 49 20 31 29Z' fill='%23152d4f'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="../styles.css">
@@ -22,21 +22,47 @@
     <header class="page-intro">
       <p class="eyebrow">Game 01 / In development</p>
       <h1 class="game-title">Project: Kept</h1>
-      <p class="lede">A gentle puzzle game about memories and the connections that bring the past back to life.</p>
+      <p class="lede">Project: Kept is a gentle puzzle journey about connection, transformation, and a sense of place.</p>
+      <div class="game-description">
+        <p>Connect matching colors, make loops, and discover your own way through handcrafted puzzles. Calm by design: subtle motion, rich color, and nothing shouting for your attention. Take a break and train your brain.</p>
+        <h2>Features</h2>
+        <ul>
+          <li>Free to play, with no ads</li>
+          <li>Play at your own pace, with unlimited retries</li>
+          <li>Low pressure: no win streaks, chores, or fake urgency</li>
+          <li>Difficult but fair: puzzles are never designed to sell you the solution</li>
+          <li>Change the board, not just the pieces, to find new solutions</li>
+          <li>Optional colorblind-friendly palettes</li>
+          <li>A growing collection of handcrafted puzzles with new mechanics and challenges</li>
+        </ul>
+      </div>
+      <p class="playtest-invitation">Would you like to be part of Project: Kept by helping us test the pre-release game? Email <a href="mailto:hello@doubtfulgames.com">hello@doubtfulgames.com</a> and we’ll send you a TestFlight link.</p>
     </header>
-    <div class="game-gallery">
-      <figure class="game-figure puzzle-figure">
-        <div class="media-stage">
-          <img src="../assets/kept-puzzle.png" alt="A Project: Kept puzzle board made of colorful circular pieces" width="720" height="1280">
+    <section class="game-carousel" aria-label="Game screenshots" aria-roledescription="carousel">
+      <div class="carousel-stage">
+        <button type="button" class="carousel-arrow" data-direction="-1" aria-label="Previous screenshot">←</button>
+        <div class="carousel-images">
+          <a class="carousel-slide" href="../assets/kept-snapshot-0001.png" aria-label="Enlarge screenshot 1"><img src="../assets/kept-snapshot-0001.png" alt="Colorful puzzle pieces on a pale board over a blue and teal background" width="718" height="1278"></a>
+          <a class="carousel-slide" href="../assets/kept-snapshot-0002.png" aria-label="Enlarge screenshot 2" hidden><img src="../assets/kept-snapshot-0002.png" alt="A tilted pale puzzle board with green, gold, and rust-colored pieces" width="718" height="1278"></a>
+          <a class="carousel-slide" href="../assets/kept-snapshot-0006.png" aria-label="Enlarge screenshot 3" hidden><img src="../assets/kept-snapshot-0006.png" alt="A wooden puzzle board with colorful pieces and obstacles against a starry background" width="718" height="1278"></a>
+          <a class="carousel-slide" href="../assets/kept-snapshot-0007.png" aria-label="Enlarge screenshot 4" hidden><img src="../assets/kept-snapshot-0007.png" alt="Golden connected pieces on a purple puzzle board over a green background" width="718" height="1278"></a>
         </div>
-        <figcaption>Piece together the quiet details of a life through tactile puzzles and the mementos left behind.</figcaption>
-      </figure>
-      <figure class="game-figure notebook-figure">
-        <img src="../assets/kept-notebook.png" alt="A notebook page of puzzle chapters with hand-drawn memory illustrations" width="720" height="1188">
-        <figcaption>Chapters become a record of places, objects, and moments.</figcaption>
-      </figure>
-    </div>
+        <button type="button" class="carousel-arrow" data-direction="1" aria-label="Next screenshot">→</button>
+      </div>
+      <p class="carousel-caption"><span class="carousel-status" aria-live="polite" aria-atomic="true">Screenshot 1 of 4</span> · Click to enlarge</p>
+      <div class="carousel-thumbnails" aria-label="Choose a screenshot">
+        <button type="button" class="carousel-thumbnail" aria-label="Show screenshot 1" aria-pressed="true" data-slide="0"><img src="../assets/kept-snapshot-0001.png" alt="Colorful puzzle pieces on a pale board over a blue and teal background" width="718" height="1278"></button>
+        <button type="button" class="carousel-thumbnail" aria-label="Show screenshot 2" aria-pressed="false" data-slide="1"><img src="../assets/kept-snapshot-0002.png" alt="A tilted pale puzzle board with green, gold, and rust-colored pieces" width="718" height="1278"></button>
+        <button type="button" class="carousel-thumbnail" aria-label="Show screenshot 3" aria-pressed="false" data-slide="2"><img src="../assets/kept-snapshot-0006.png" alt="A wooden puzzle board with colorful pieces and obstacles against a starry background" width="718" height="1278"></button>
+        <button type="button" class="carousel-thumbnail" aria-label="Show screenshot 4" aria-pressed="false" data-slide="3"><img src="../assets/kept-snapshot-0007.png" alt="Golden connected pieces on a purple puzzle board over a green background" width="718" height="1278"></button>
+      </div>
+    </section>
+    <dialog class="screenshot-dialog" aria-label="Enlarged game screenshot">
+      <button type="button" class="button dialog-close" aria-label="Close enlarged screenshot">Close ×</button>
+      <img alt="">
+    </dialog>
   </main>
   <footer class="site-footer"><span>© 2026 Doubtful Games</span><nav class="footer-nav" aria-label="Footer navigation"><a href="credits/index.html">Credits</a><a href="../privacy/index.html">Privacy</a><a href="support/index.html">Support</a></nav></footer>
+  <script src="carousel.js"></script>
 </body>
 </html>

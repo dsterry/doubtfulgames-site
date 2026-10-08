@@ -344,15 +344,30 @@ figcaption {
 }
 
 .game-story > div:last-child { max-width: 720px; }
-.game-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
-  padding-bottom: clamp(7rem, 14vw, 12rem);
-}
-.game-figure { width: 100%; margin: 0; }
-.game-gallery .media-stage { margin-top: 0; }
+ .game-carousel { max-width: 720px; margin: 0 auto; padding-bottom: clamp(4rem, 8vw, 7rem); }
+.carousel-stage { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 1rem; }
+.carousel-images { display: grid; justify-items: center; touch-action: pan-y; }
+.carousel-slide { display: block; }
+.carousel-slide[hidden] { display: none; }
+.carousel-slide img { width: auto; height: min(460px, 55svh); max-width: 100%; object-fit: contain; box-shadow: 0 12px 30px var(--shadow); }
+.carousel-arrow { width: 44px; height: 44px; border: 1px solid var(--rule); border-radius: 50%; background: var(--paper-bright); color: var(--ink); font: inherit; font-size: 1.3rem; cursor: pointer; }
+.carousel-arrow:hover { background: #d8f1ed; }
+.carousel-caption { margin: 1rem 0; text-align: center; color: var(--ink-soft); font-size: .8rem; }
+.carousel-thumbnails { display: flex; justify-content: center; gap: .75rem; }
+.carousel-thumbnail { padding: 4px; border: 2px solid transparent; border-radius: 4px; background: transparent; cursor: pointer; }
+.carousel-thumbnail[aria-pressed="true"] { border-color: var(--ink); }
+.carousel-thumbnail img { width: 36px; height: 64px; object-fit: contain; }
+.screenshot-dialog { max-width: calc(100vw - 24px); max-height: calc(100svh - 24px); padding: 1rem; border: 1px solid var(--rule); background: var(--paper); }
+.screenshot-dialog::backdrop { background: rgba(10, 23, 40, .8); }
+.screenshot-dialog img { margin: .75rem auto 0; width: auto; height: auto; max-height: calc(100svh - 110px); object-fit: contain; }
+.dialog-close { display: flex; margin-left: auto; cursor: pointer; }
+body:has(.screenshot-dialog[open]) { overflow: hidden; }
+.playtest-invitation { max-width: 660px; margin-bottom: 0; color: var(--ink-soft); }
+.playtest-invitation a { color: var(--ink); text-underline-offset: .2em; }
+.game-description { max-width: 720px; margin-bottom: 2.2rem; color: var(--ink-soft); }
+.game-description h2 { margin: 2rem 0 1rem; color: var(--ink); font-size: 2rem; }
+.game-description ul { padding-left: 1.25rem; }
+.game-description li + li { margin-top: .5rem; }
 .notebook-figure img { box-shadow: 0 22px 60px var(--shadow); }
 
 .studio-page { position: relative; display: grid; align-items: center; padding: clamp(6rem, 13vw, 12rem) 0; }
@@ -408,7 +423,7 @@ figcaption {
   .page-intro { padding-top: 5rem; }
   .game-title { white-space: normal; }
   .game-story { grid-template-columns: 1fr; gap: 1rem; }
-  .game-gallery { grid-template-columns: 1fr; }
+  .carousel-stage { gap: .5rem; }
   .studio-page { align-items: start; }
   .studio-dots i:nth-child(1) { top: auto; bottom: 8%; opacity: .8; }
   .studio-dots i:nth-child(2) { right: 42%; bottom: 5%; opacity: .8; }
