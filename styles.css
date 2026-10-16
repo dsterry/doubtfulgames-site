@@ -349,12 +349,14 @@ figcaption {
 .carousel-images { display: grid; justify-items: center; touch-action: pan-y; }
 .carousel-slide { display: block; }
 .carousel-slide[hidden] { display: none; }
-.carousel-slide img { width: auto; height: min(460px, 55svh); max-width: 100%; object-fit: contain; box-shadow: 0 12px 30px var(--shadow); }
+.carousel-slide img, .carousel-slide video { width: auto; height: min(460px, 55svh); max-width: 100%; object-fit: contain; box-shadow: 0 12px 30px var(--shadow); }
 .carousel-arrow { width: 44px; height: 44px; border: 1px solid var(--rule); border-radius: 50%; background: var(--paper-bright); color: var(--ink); font: inherit; font-size: 1.3rem; cursor: pointer; }
 .carousel-arrow:hover { background: #d8f1ed; }
 .carousel-caption { margin: 1rem 0; text-align: center; color: var(--ink-soft); font-size: .8rem; }
 .carousel-thumbnails { display: flex; justify-content: center; gap: .75rem; }
 .carousel-thumbnail { padding: 4px; border: 2px solid transparent; border-radius: 4px; background: transparent; cursor: pointer; }
+.carousel-video-thumbnail { width: 48px; min-height: 76px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .25rem; color: var(--ink); font: inherit; font-size: .65rem; }
+.carousel-video-thumbnail span:first-child { font-size: 1.25rem; }
 .carousel-thumbnail[aria-pressed="true"] { border-color: var(--ink); }
 .carousel-thumbnail img { width: 36px; height: 64px; object-fit: contain; }
 .screenshot-dialog { max-width: calc(100vw - 24px); max-height: calc(100svh - 24px); padding: 1rem; border: 1px solid var(--rule); background: var(--paper); }
