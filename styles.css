@@ -314,7 +314,20 @@ figcaption {
   font-size: .78rem;
 }
 
-.footer-nav { display: flex; gap: 1.5rem; }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.social-links { display: flex; align-items: center; gap: .5rem; }
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: background 160ms ease;
+}
+.social-links a:hover, .social-links a:focus-visible { background: rgba(21, 45, 79, .06); }
+.social-links img { width: 24px; height: 24px; object-fit: contain; }
 
 .utility-page { width: min(760px, calc(100vw - 48px)); margin: 0 auto; padding: clamp(5rem, 12vw, 9rem) 0 8rem; }
 .utility-page h1 { font-size: clamp(3.2rem, 8vw, 6.5rem); }
@@ -366,6 +379,8 @@ figcaption {
 body:has(.screenshot-dialog[open]) { overflow: hidden; }
 .playtest-invitation { max-width: 660px; margin-bottom: 0; color: var(--ink-soft); }
 .playtest-invitation a { color: var(--ink); text-underline-offset: .2em; }
+.community-invitation { max-width: 660px; margin: 1.25rem 0 0; color: var(--ink-soft); }
+.community-invitation a { color: var(--ink); text-underline-offset: .2em; }
 .game-description { max-width: 720px; margin-bottom: 2.2rem; color: var(--ink-soft); }
 .game-description h2 { margin: 2rem 0 1rem; color: var(--ink); font-size: 2rem; }
 .game-description ul { padding-left: 1.25rem; }
