@@ -377,8 +377,6 @@ figcaption {
 .screenshot-dialog img { margin: .75rem auto 0; width: auto; height: auto; max-height: calc(100svh - 110px); object-fit: contain; }
 .dialog-close { display: flex; margin-left: auto; cursor: pointer; }
 body:has(.screenshot-dialog[open]) { overflow: hidden; }
-.playtest-invitation { max-width: 660px; margin-bottom: 0; color: var(--ink-soft); }
-.playtest-invitation a { color: var(--ink); text-underline-offset: .2em; }
 .community-invitation { max-width: 660px; margin: 1.25rem 0 0; color: var(--ink-soft); }
 .community-invitation a { color: var(--ink); text-underline-offset: .2em; }
 .game-description { max-width: 720px; margin-bottom: 2.2rem; color: var(--ink-soft); }
