@@ -90,7 +90,7 @@ img { display: block; max-width: 100%; }
 .site-header .nav a { color: rgba(255, 254, 247, .72); }
 .site-header .nav a:hover,
 .site-header .nav a:focus-visible,
-.site-header .nav a[aria-current="page"] { color: var(--paper-bright); }
+.site-header .nav a[aria-current] { color: var(--paper-bright); }
 
 .nav a::after {
   content: "";
@@ -111,7 +111,7 @@ img { display: block; max-width: 100%; }
 .nav a:nth-child(3)::after { background: var(--ochre); }
 
 .nav a:hover, .nav a:focus-visible, .footer-nav a:hover, .footer-nav a:focus-visible { color: var(--ink); }
-.nav a:hover::after, .nav a:focus-visible::after, .nav a[aria-current="page"]::after {
+.nav a:hover::after, .nav a:focus-visible::after, .nav a[aria-current]::after {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
@@ -384,11 +384,10 @@ figcaption {
 
 .kept-checklist li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .4em; }
 .kept-checklist img { width: max(17px, 1em); height: auto; margin-top: 4px; }
-.kept-hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
-.kept-beta-contact { margin: .55rem 0 0; color: var(--ink-soft); font-size: .8rem; overflow-wrap: anywhere; }
-.kept-primary { gap: .7rem; padding-inline: 1.2rem; background: var(--kept-teal); color: var(--paper-bright); }
-.kept-primary:hover, .kept-primary:focus-visible { background: var(--ink); border-color: var(--ink); }
-.kept-primary span { color: #efcd8b; font-size: .68rem; }
+.game-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; }
+.app-store-badge img { display: block; width: auto; height: 44px; }
+.kept-watch { gap: .5rem; }
+.kept-watch span { color: var(--kept-teal); font-size: .68rem; }
 
 .kept-gameplay {
   display: grid;
@@ -495,6 +494,15 @@ body:has(.screenshot-dialog[open]) { overflow: hidden; }
 .studio-dots i:nth-child(4) { width: clamp(1rem, 2vw, 2rem); aspect-ratio: 1; right: 31%; top: 13%; background: var(--sky); }
 
 .support-page { padding-bottom: clamp(6rem, 12vw, 10rem); }
+.kept-support { padding-block: clamp(2.5rem, 6vw, 5rem); }
+.kept-support .back { margin-bottom: 1.75rem; }
+.kept-support h1 { margin-bottom: 1rem; }
+.kept-support h2[id] { scroll-margin-top: 1.5rem; }
+.kept-support li + li { margin-top: .6rem; }
+.support-control-icon { display: inline-block; margin-right: .25em; vertical-align: -.23em; }
+.kept-support-contact { margin-top: 3rem; padding: 1.25rem; border: 1px solid var(--rule); background: #edf1e7; }
+.kept-support-contact h2 { margin: 0 0 .75rem; }
+.kept-support-contact p { margin-bottom: 0; overflow-wrap: anywhere; }
 .support-page .compact-intro { padding: clamp(2.5rem, 6vw, 5rem) 0 1.5rem; }
 .compact-intro h1 { margin-bottom: .65rem; font-size: clamp(3.2rem, 6vw, 5.5rem); }
 .compact-intro p { margin-bottom: 0; color: var(--ink-soft); }
@@ -504,14 +512,16 @@ body:has(.screenshot-dialog[open]) { overflow: hidden; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: clamp(1rem, 3vw, 2rem);
-  padding: clamp(1.4rem, 3vw, 2.3rem) 0;
+  padding: clamp(1.4rem, 3vw, 2.3rem) clamp(.75rem, 2vw, 1.5rem);
   border-bottom: 1px solid var(--rule);
   text-decoration: none;
 }
+.support-directory .support-featured { background: #edf1e7; }
+.support-directory a:hover, .support-directory a:focus-visible { background: var(--paper-bright); }
 .support-directory strong { display: block; font-family: Iowan Old Style, Baskerville, "Times New Roman", serif; font-size: clamp(1.45rem, 3vw, 2.4rem); font-weight: 400; }
 .support-directory small { display: block; color: var(--ink-soft); font-size: .9rem; }
 .support-directory b { font-size: 1.3rem; font-weight: 400; transition: transform 160ms ease; }
-.support-directory a:hover b, .support-directory a:focus-visible b { transform: translate(.2rem, -.2rem); }
+.support-directory a:hover b, .support-directory a:focus-visible b { transform: translateX(.2rem); }
 .support-dot { display: block; width: clamp(3rem, 6vw, 5.5rem); aspect-ratio: 1; border-radius: 50%; box-shadow: inset 0 -4px 0 rgba(21,45,79,.08); }
 .support-dot.coral { background: var(--coral); }
 .support-dot.mint { background: var(--mint); }
